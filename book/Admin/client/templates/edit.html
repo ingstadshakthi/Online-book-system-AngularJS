@@ -1,0 +1,41 @@
+<div ng-init="showcart()">
+  <p>Edit cart</p>
+  <div>
+    <form ng-submit="updatecart()">
+
+      <div>
+        Book Name:
+        <input type="text" ng-model="cart.title">
+      </div>
+      <div>
+        Book Author:
+        <input type="text" ng-model="cart.author">
+      </div>
+      <div>
+        Price:
+        <input type="number" ng-model="cart.price">
+      </div>
+      <div>
+        Quantity:
+        <input type="number" ng-model="cart.quantity">
+      </div>
+      <div>
+        Category:
+        <select ng-model="cart.category">
+          <option>Mystery</option>
+          <option>Thriller</option>
+          <option>Fantasy</option>
+          <option>Romance</option>
+          <option>Education</option>
+          <option>Mythology</option>
+        </select>
+      </div>
+      <div>
+        Book Description:
+        <textarea ng-model="cart.description"></textarea>
+      </div>
+      <button type="submit">Update</button>
+      <a href="#/cart"> back</a>
+    </form>
+    <div>
+      <div>

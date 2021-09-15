@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+	<title>Admin</title>
+
+	<style>
+		* {
+			margin: 0px;
+			padding: 0px;
+			font-family: sans-serif;
+		}
+
+		a {
+			text-decoration: none;
+			color: blue;
+			padding: 10px;
+			cursor: pointer;
+
+		}
+
+		table {
+			width: 100%;
+		}
+
+		.header {
+			display: flex;
+			width: 100%;
+			justify-content: center;
+			margin-top: 20px;
+		}
+
+		.headitems {
+			flex: 1;
+			height: 40px;
+			font-size: 28px;
+			color: white !important;
+		}
+
+		.headitem a {
+			font-size: 24px;
+		}
+
+		input,
+		textarea,
+		select {
+			outline: none;
+			font-size: 24px;
+			margin-top: 10px;
+			width: 200px;
+			margin-right: 0px;
+		}
+
+		td,
+		th {
+			height: 30px;
+		}
+	</style>
+</head>
+
+<body ng-controller="cartController">
+	<center>
+		<h1>Welcome Admin</h1>
+	</center>
+	<div class="header">
+		<div class="headitems">
+			<a href="#/cart">All Books</a>
+		</div>
+		<div class="headitems">
+			<a href="#/cart/add"> Add New product</a>
+		</div>
+		<div class="headitems">
+			<a href="#/order">Order Details</a>
+		</div>
+		<div>
+			<Input type="text" placeholder="Search" ng-model="search">
+		</div>
+	</div>
+	<br>
+	<hr>
+	<hr>
+	<div ng-view></div>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.2/angular-route.min.js"></script>
+	<script src="app.js"></script>
+	<script src="controllers/controllers.js"></script>
+
+</body>
+
+</html>

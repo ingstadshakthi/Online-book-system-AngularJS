@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+	<title>Online Book Carting system</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		a {
+			text-decoration: none;
+			color: blue;
+			padding: 10px;
+		}
+
+		li {
+			margin-top: 20px;
+		}
+
+		h1 {
+			margin: 20px;
+		}
+
+		input {
+			margin: 10px;
+		}
+	</style>
+
+
+</head>
+
+<body ng-controller="cartController">
+	<div>
+		<div class="title">
+			<p class="titlep">
+				E-Book Portal
+			</p>
+		</div>
+
+		<div class="container">
+			<div class="form-group">
+				<div class="dropdown">
+					<div class="default-option"><select ng-model="search">
+							<option>Mystery</option>
+							<option>Thriller</option>
+							<option>Fantasy</option>
+							<option>Romance</option>
+							<option>Education</option>
+							<option>Mythology</option>
+						</select></div>
+					<div class="dropdown-list">
+					</div>
+				</div>
+				<div class="search">
+					<input type="text" class="search-input" placeholder="Search for Book" ng-model="searchBar">
+				</div>
+				<button class="btn" type="submit"><i class="fas fa-search"></i></button>
+			</div>
+		</div>
+	</div>
+	<br>
+	<br>
+	<br>
+	<div ng-view></div>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.2/angular-route.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script src="app.js"></script>
+	<script src="controllers/controllers.js"></script>
+
+</body>
+
+</html>

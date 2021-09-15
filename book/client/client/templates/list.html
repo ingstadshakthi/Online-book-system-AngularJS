@@ -1,0 +1,25 @@
+<div ng-init="getcart()">
+	<table class="table table-dark">
+		<thead>
+			<tr>
+				<th>Book Title</th>
+				<th>Book Author</th>
+				<th>Price</th>
+				<th>Category</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="c in cart |filter:search |filter:searchBar">
+				<td>{{ c.title }}</td>
+				<td>{{ c.author }}</td>
+				<td>{{ c.price }}</td>
+				<td>{{ c.category }}</td>
+				<td>{{ c.description }}</td>
+				<td>
+					<a href=" #/cart/{{c._id}}/show"> Buy Now </a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

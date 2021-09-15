@@ -1,0 +1,51 @@
+<div ng-init="getcart()">
+	<div>
+		<table border=1>
+			<thead>
+				<tr>
+					<th>Book Title</th>
+					<th>Author</th>
+					<th>Price</th>
+					<th>Category</th>
+					<th>Quantity</th>
+					<th>Description</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="c in cart | filter:search">
+					<td>
+						<center>{{ c.title }}</center>
+					</td>
+					<td>
+						<center>
+							{{ c.author }}
+						</center>
+					</td>
+					<td>
+						<center>
+							{{ c.price }}
+						</center>
+					</td>
+					<td>
+						<center>{{ c.category }}</center>
+					</td>
+					<td>
+						<center>{{c.quantity}}</center>
+					</td>
+					<td>
+						<center>
+							{{c.description}}
+						</center>
+					</td>
+					<td>
+						<center>
+							<a href="#/cart/{{c._id}}/edit"> Update Details </a>
+							<a ng-click="deletecart(c._id)"> Delete the Book</a>
+						</center>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div>
+			<div>

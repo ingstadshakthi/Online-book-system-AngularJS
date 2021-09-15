@@ -1,0 +1,46 @@
+<div style="display: flex;">
+	<div ng-init="showcart()" style="flex: 1;">
+		<h1>Book Details</h1>
+		<label>Book Title :<label ng-model="order.btitle">{{ cart.title }}</label></label></br>
+		<label>Book Author: {{ cart.author }}</label></br>
+		<label>Price: {{ cart.price }}</label></br>
+		<label>category: {{ cart.category}}</label></br>
+		<label>Description: {{ cart.description }}</label></br>
+		<label>Quantity: <select ng-model="order.quantity" required>
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+			</select></label></br>
+		<label ng-model="order.total">Total Cost:{{order.quantity*cart.price}}</label>
+	</div>
+	<div style="flex: 1;">
+		<form ng-submit="addorder()">
+			<h1>Customer Details</h1>
+			<form class="form-content" ng-submit="updatecart()">
+				<div>
+					<label>Enter Name </label>
+				</div>
+				<div>
+					<input type="text" ng-model="order.name" required />
+				</div>
+				<div>
+					<label>Enter your phone Number</label>
+				</div>
+				<div>
+					<input type="text" ng-model="order.phone" required />
+				</div>
+				<div>
+					<label>Enter your Address </label>
+				</div>
+				<div>
+					<input type="text" ng-model="order.address" required />
+				</div>
+				</br>
+				<button type="submit" style="border: none;color:dodgerblue">Buy Now</button>
+				<a href="#/cart"> Cancel</a>
+			</form>
+	</div>
+
+</div>

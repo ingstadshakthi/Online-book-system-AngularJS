@@ -1,0 +1,30 @@
+<div ng-init="getorder()">
+    <div>
+        <table border=1>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="c in order |filter:search">
+                    <td>
+                        <center>{{ c.name }}</center>
+                    </td>
+                    <td>
+                        <center>
+                            {{ c.phone }}
+                        </center>
+                    </td>
+                    <td>
+                        <center>
+                            {{ c.address }}
+                        </center>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div>
+            <div>
